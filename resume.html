@@ -19,8 +19,12 @@
             margin-bottom: 20px;
         }
 
-        i {
+        i.spacer {
             padding: 0 7px;
+        }
+
+        .fa-label {
+            width: 16px;
         }
 
         .left-label {
@@ -202,17 +206,24 @@
 
 
 <h1>{{will.name}}</h1>
-<div>{{will.phone}}</div>
-<div>{{will.email}}</div>
-<div>
+<h5>
+    <i class="fa-fw fa fa-phone"></i>
+    <span>{{will.phone}}</span>
+</h5>
+<h5>
+    <i class="fa-fw fa fa-envelope-o"></i>
+    <span>{{will.email}}</span>
+</h5>
+<h5>
     <span>
+        <i class="fa-fw fa fa-map-marker"></i>
         <span>{{will.address}}</span>
-        <i class="fa fa-bolt"></i>
+        <i class="fa fa-angle-double-right spacer"></i>
         <span>{{will.city}}, {{will.state}}</span>
-        <i class="fa fa-bolt"></i>
+        <i class="fa fa-angle-double-right spacer"></i>
         <span>{{will.zip}}</span>
     </span>
-</div>
+</h5>
 
 <hr>
 
