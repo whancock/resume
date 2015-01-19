@@ -1,0 +1,329 @@
+<html lang="en" ng-app="resume">
+
+<head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            padding: 40px 20px 140px;
+            width: 8.5in !important;
+            margin: auto;
+        }
+
+        .row {
+            margin-bottom: 20px;
+        }
+
+        i {
+            padding: 0 7px;
+        }
+
+        .left-label {
+            font-weight: bold;
+        }
+
+        .title {
+            font-weight: bold;
+        }
+
+        .desc {
+            max-width: 500px;
+        }
+
+        .date-right {
+            float: right;
+            font-style: italic;
+        }
+
+        .position {
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+
+<body class="container" ng-controller="resumeController as will">
+
+<script>
+
+    angular.module('resume', [])
+
+            .controller('resumeController', [function() {
+
+                this.name = 'Will Hancock';
+                this.phone = '410-402-0251';
+                this.email = 'whancock@gatech.edu';
+                this.address = '1075 Center St NW';
+                this.city = 'Atlanta';
+                this.state = 'GA';
+                this.zip = '30318';
+
+                this.edu = {
+                    label: 'Education',
+                    entry: [{
+                        name: 'Georgia Institute of Technology',
+                        location: 'Atlanta, Georgia',
+                        level: [
+                            {
+                                label: 'Master of Science in Computer Science',
+                                dateStart: 'Aug 2014',
+                                dateEnd: 'Present'
+                            },
+                            {
+                                label: 'Bachelor of Science in Computer Science',
+                                dateStart: 'Aug 2006',
+                                dateEnd: 'Fall 2011'
+                            }
+                        ]
+                    }]
+                };
+
+                this.experience = {
+                    label: 'Experience',
+                    entry: [
+                        {
+                            name: 'Design & Intelligence Lab',
+                            location: 'Georgia Tech',
+                            dateStart: 'Sept 2014',
+                            dateEnd: 'Present',
+                            roles: [
+                                'Helping to develop Design Study Library, a research tool to teach biologically inspired design processes to non-experts'
+                            ]
+                        },
+                        {
+                            name: 'Piksel',
+                            location: 'Atlanta, GA',
+                            position: 'Software Architect',
+                            dateStart: 'Feb 2012',
+                            dateEnd: 'Present',
+                            roles: [
+                                'Planned and oversaw re-architecture of platform using AngularJS/RESTful backend',
+                                'Deployed I18N from scratch for entire CMS, using self written Python toolkit',
+                                'Built custom client facing API docs using PHP reflection',
+                                'Designed and deployed PHPUnit suite from scratch'
+                            ]
+                        },
+                        {
+                            name: 'Javlin, Inc.',
+                            location: 'Prague, Czech Republic',
+                            position: 'Software Enginneer',
+                            dateStart: 'Spring 2011',
+                            roles: [
+                                'Developed ETL software using Eclipse/Java SWT'
+                            ]
+                        },
+                        {
+                            name: 'KuaiLeTao',
+                            location: 'Shanghai, China',
+                            position: 'Founder, CTO',
+                            dateStart: 'Fall 2009',
+                            dateEnd: 'Fall, 2010',
+                            roles: [
+                                'Utilized PHP/MYSQL/JS to design high performance AJAX game',
+                                'Designed database sufficient to handle extensive polling',
+                                'Localized language into simplified Mandarin'
+                            ]
+                        },
+                        {
+                            name: 'Playmotion, Inc.',
+                            location: 'Atlanta, Georgia',
+                            position: 'Software Engineer',
+                            dateStart: 'Aug 2008',
+                            dateEnd: 'May 2009',
+                            roles: [
+                                'Designed vision algorithms in C++ using OpenCV for augmented reality app',
+                                'Worked with Panda3D/Python/physics engine to create platform games'
+                            ]
+                        }
+                    ]
+                };
+
+                this.skills = {
+                    label: 'Skills',
+                    entry: [
+                        'JS (JQuery, Angular, etc...),  PHP,  Python,  Java,  MySQL',
+                        'LINUX,  GIT,  SVN,  Eclipse,  SWT,  Photoshop/GIMP',
+                        'Languages:  Mandarin - Intermediate;  French - Basic'
+                    ]};
+
+                this.activities = {
+                    label: 'Activities',
+                    entry: [
+                        {
+                            name: 'SOPO Bicycle Co-op',
+                            location: 'Atlanta, GA',
+                            dateStart: 'Aug 2007',
+                            dateEnd: 'Present',
+                            roles: [
+                                'Volunteer four hours/wk providing Atlanta with affordable bike maintenance'
+                            ]
+                        },
+                        {
+                            name: 'Georgia Aquarium',
+                            location: 'Atlanta, GA',
+                            dateStart: '2007, Oct 2013',
+                            dateEnd: 'Present',
+                            roles: [
+                                'Volunteer to help engage guests and help with day to day operatio'
+                            ]
+                        },
+                        {
+                            name: 'Study Abroad',
+                            location: 'UPC, Barcelona, Spain',
+                            dateStart: 'Summer 2008'
+                        },
+                        {
+                            name: 'Study Abroad',
+                            location: 'Renmin University, Beijing, China',
+                            dateStart: 'Sept 2009',
+                            dateEnd: 'July 2010'
+                        },
+                        {
+                            name: 'English Tutor',
+                            location: 'Beijing, China',
+                            dateStart: 'Nov 2009',
+                            dateEnd: 'July 2010'
+                        }
+                    ]};
+
+                this.awards = {
+                    label: 'Awards',
+                    entry: ['Eagle Scout, Boy Scouts of America']
+                };
+
+            }]);
+
+</script>
+
+
+<h1>{{will.name}}</h1>
+<div>{{will.phone}}</div>
+<div>{{will.email}}</div>
+<div>
+    <span>
+        <span>{{will.address}}</span>
+        <i class="fa fa-bolt"></i>
+        <span>{{will.city}}, {{will.state}}</span>
+        <i class="fa fa-bolt"></i>
+        <span>{{will.zip}}</span>
+    </span>
+</div>
+
+<hr>
+
+
+<div class="row">
+
+    <div class="col-xs-2 left-label">{{will.edu.label}}</div>
+
+    <div class="col-xs-10">
+
+        <div ng-repeat="school in will.edu.entry">
+
+            <div>
+                <span class="title">{{school.name}}</span>
+                <span>, </span>
+                <span>{{school.location}}</span>
+            </div>
+
+            <div ng-repeat="grade in school.level">
+                <span>{{grade.label}}</span>
+                <span class="date-right">
+                    <span>{{grade.dateStart}}</span>
+                    <span> - </span>
+                    <span>{{grade.dateEnd}}</span>
+                </span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="col-xs-2 left-label">{{will.experience.label}}</div>
+
+    <div class="col-xs-10">
+
+        <div class="position" ng-repeat="position in will.experience.entry">
+
+            <div>
+                <span>
+                    <span class="title">{{position.name}}</span>
+                    <span>, </span>
+                    <span>{{position.location}}</span>
+                </span>
+
+                <span class="date-right">
+                    <span>{{position.dateStart}}</span>
+                    <span> - </span>
+                    <span>{{position.dateEnd}}</span>
+                </span>
+            </div>
+
+            <ul>
+                <li class="desc" ng-repeat="role in position.roles">{{role}}</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="col-xs-2 left-label">{{will.activities.label}}</div>
+
+    <div class="col-xs-10">
+
+        <div ng-repeat="activity in will.activities.entry">
+
+            <div>
+            <span>
+                <span class="title">{{activity.name}}</span>
+                <span>, </span>
+                <span>{{activity.location}}</span>
+            </span>
+
+            <span class="date-right">
+                <span>{{activity.dateStart}}</span>
+                <span> - </span>
+                <span>{{activity.dateEnd}}</span>
+            </span>
+            </div>
+
+            <ul>
+                <li ng-repeat="description in activity.roles">{{description}}</li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-2 left-label">{{will.skills.label}}</div>
+    <div class="col-xs-10">
+        <ul>
+            <li ng-repeat="skill in will.skills.entry">{{skill}}</li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-xs-2 left-label">{{will.awards.label}}</div>
+    <div class="col-xs-10">
+        <ul>
+            <li ng-repeat="award in will.awards.entry">{{award}}</li>
+        </ul>
+    </div>
+</div>
+
+
+</body>
+
+</html>
