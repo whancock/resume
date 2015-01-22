@@ -246,7 +246,7 @@
                 <span>{{grade.label}}</span>
                 <span class="date-right">
                     <span>{{grade.dateStart}}</span>
-                    <span> - </span>
+                    <span ng-if="grade.dateEnd"> - </span>
                     <span>{{grade.dateEnd}}</span>
                 </span>
             </div>
@@ -272,7 +272,7 @@
 
                 <span class="date-right">
                     <span>{{position.dateStart}}</span>
-                    <span> - </span>
+                    <span ng-if="position.dateEnd"> - </span>
                     <span>{{position.dateEnd}}</span>
                 </span>
             </div>
@@ -302,7 +302,7 @@
 
             <span class="date-right">
                 <span>{{activity.dateStart}}</span>
-                <span> - </span>
+                <span ng-if="activity.dateEnd"> - </span>
                 <span>{{activity.dateEnd}}</span>
             </span>
             </div>
@@ -336,5 +336,4 @@
 
 
 </body>
-
 </html>
