@@ -60,9 +60,8 @@
             .controller('resumeController', [function() {
 
                 this.name = 'Will Hancock';
-                this.phone = '410-402-0251';
-                this.email = 'whancock@gatech.edu';
-                this.address = '1075 Center St NW';
+                this.phone = '240-466-6020';
+                this.email = 'will@willhancock.net';
                 this.city = 'Atlanta';
                 this.state = 'GA';
                 this.zip = '30318';
@@ -76,12 +75,12 @@
                             {
                                 label: 'Master of Science in Computer Science',
                                 dateStart: 'Aug 2014',
-                                dateEnd: 'Present'
+                                dateEnd: 'present'
                             },
                             {
                                 label: 'Bachelor of Science in Computer Science',
                                 dateStart: 'Aug 2006',
-                                dateEnd: 'Fall 2011'
+                                dateEnd: 'fall 2011'
                             }
                         ]
                     }]
@@ -91,10 +90,19 @@
                     label: 'Experience',
                     entry: [
                         {
+                            name: 'Naval Research Lab',
+                            location: 'Washington DC',
+                            dateStart: 'summer 2016',
+                            position: 'NREIP Intern',
+                            roles: [
+                                'Researched deceit detection by analyzing player intentions within the game of werewolf'
+                            ]
+                        },
+                        {
                             name: 'Salesfusion',
                             location: 'Atlanta, GA',
                             dateStart: 'June 2015',
-                            dateEnd: 'Present',
+                            dateEnd: 'May 2016',
                             position: 'Frontend Consultant',
                             roles: [
                                 'Overseeing frontend migration to AngularJS',
@@ -105,8 +113,9 @@
                             name: 'Design & Intelligence Lab',
                             location: 'Georgia Tech',
                             dateStart: 'Sept 2014',
-                            dateEnd: 'Present',
+                            dateEnd: 'present',
                             roles: [
+                                'Researching theory of invention by giving analogical reasoning information processing account of biologically inspired design prototypes',
                                 'Developing Design Study Library, a research tool to teach biologically inspired design processes to non-experts'
                             ]
                         },
@@ -136,8 +145,8 @@
                             name: 'KuaiLeTao',
                             location: 'Shanghai, China',
                             position: 'Founder, CTO',
-                            dateStart: 'Fall 2009',
-                            dateEnd: 'Fall, 2010',
+                            dateStart: 'fall 2009',
+                            dateEnd: 'fall, 2010',
                             roles: [
                                 'Utilized PHP/MYSQL/JS to design high performance AJAX game',
                                 'Designed database sufficient to handle extensive polling',
@@ -161,9 +170,9 @@
                 this.skills = {
                     label: 'Skills',
                     entry: [
-                        'Angular/JS,  PHP,  Python,  Java,  SQL,  C/OpenCV',
+                        'Angular/JS,  Python,  Node,  PHP,  Java,  SQL,  C/OpenCV',
                         'Unix,  Apache,  I18N,  Photoshop/GIMP,  GIT,  SVN,  SASS/CSS,  MVC,  REST',
-                        'Languages:  Mandarin - Intermediate;  French - Basic'
+                        'Languages:  Mandarin, French (Beginner)'
                     ]};
 
                 this.activities = {
@@ -174,7 +183,7 @@
                             location: 'Atlanta, GA',
                             position: 'Manager',
                             dateStart: 'Aug 2012',
-                            dateEnd: 'Present',
+                            dateEnd: 'present',
                             roles: [
                                 'Volunteer four hours/wk providing Atlanta with affordable bike maintenance'
                             ]
@@ -183,7 +192,7 @@
                             name: 'Georgia Aquarium',
                             location: 'Atlanta, GA',
                             dateStart: '2007, Oct 2013',
-                            dateEnd: 'Present',
+                            dateEnd: 'present',
                             roles: [
                                 'Volunteer to help engage guests and help with day to day operations'
                             ]
@@ -191,7 +200,7 @@
                         {
                             name: 'Study Abroad',
                             location: 'UPC, Barcelona, Spain',
-                            dateStart: 'Summer 2008'
+                            dateStart: 'summer 2008'
                         },
                         {
                             name: 'Study Abroad',
@@ -229,8 +238,6 @@
 <h5>
     <span>
         <i class="fa-fw fa fa-map-marker"></i>
-        <span>{{will.address}}</span>
-        <i class="fa fa-angle-double-right spacer"></i>
         <span>{{will.city}}, {{will.state}}</span>
         <i class="fa fa-angle-double-right spacer"></i>
         <span>{{will.zip}}</span>
